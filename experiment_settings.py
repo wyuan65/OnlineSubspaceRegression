@@ -10,7 +10,7 @@ N_L = min(N_L, int(np.floor(d/k))) # tasks per cluster
 
 
 M = 2 # number of experts
-L = 2 # number of task clusters
+L = 10 # number of task clusters
 N = N_L*L # total number of unique tasks
 
 

@@ -10,7 +10,7 @@ N_L = min(N_L, int(np.floor(d/k))) # tasks per cluster
 
 
 M = 2 # number of experts
-L = 10 # number of task clusters
+L = 2 # number of task clusters
 N = N_L*L # total number of unique tasks
 
 
@@ -25,7 +25,7 @@ w_eta = 1e-4 # expert learning rate
 # task_split = 4
 # T= first_task_arrival + (task_split - 1)*time_to_new# 2000 # number of task arrivals
 
-T = 300
+T = N**2
 
 epochs = 20
 

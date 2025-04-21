@@ -87,8 +87,15 @@ import matplotlib.pyplot as plt
 y_lim=None
 
 plt.figure(9)
-plt.plot(clf.rewards)
+plt.plot(np.cumsum(clf.rewards))
 plt.xlabel("Rounds")
-plt.ylabel("Reward (Negative Hamming Loss)")
+plt.ylabel("Reward (Inverse Hamming Loss)")
+plt.ylim(0, y_lim)
+plt.show()
+
+plt.figure(9)
+plt.plot(np.arange(T) - np.cumsum(clf.rewards))
+plt.xlabel("Rounds")
+plt.ylabel("Regret (Inverse Hamming Loss)")
 plt.ylim(0, y_lim)
 plt.show()
